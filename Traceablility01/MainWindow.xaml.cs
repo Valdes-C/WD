@@ -98,11 +98,11 @@ namespace Traceablility01
                 SavingData.Program.SaveToXLSX(path , report, batch.ToString(), startDate.Text, endDate.Text);
                 if (File.Exists(path))
                 { 
-                    var msg = System.Windows.MessageBox.Show($"Identyfikacji {batch.ToString()} została zapisana jako {@path}", "Sukces");
+                    var msg = System.Windows.MessageBox.Show($"Identyfikacja {batch.ToString()} została zapisana jako {@path}", "Sukces");
                 }
                 else
                 {
-                    var msg = System.Windows.MessageBox.Show($"Identyfikacj {batch.ToString()} nie powiodła się.", "Porażka");
+                    var msg = System.Windows.MessageBox.Show($"Identyfikacja {batch.ToString()} nie powiodła się.", "Porażka");
                 }
             }
             waitForm.Close();
