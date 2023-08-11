@@ -5,9 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Traceablility01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-
+        Title="Identyfikacja PZ" Height="756" Width="561">
+    <Grid Margin="0,0,0,69">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="ReportFile" Grid.Column="1" Grid.Row="9" Height="20" Margin="135,3,90,-3" Grid.ColumnSpan="2"
+                 Width="280" IsReadOnly="True"
+        />
+        <Label x:Name="label01" Grid.Row="6" Grid.Column="1" 
+               Width="100" Content="Data od" FontSize="20" 
+               FontWeight="Bold" 
+        />
+        <Label x:Name="label02" Grid.Row="6" Grid.Column="2" 
+               Width="100" Content="data do" FontSize="20" 
+               FontWeight="Bold"
+        />
+        <ComboBox x:Name="startDate" Grid.Column="1" Grid.Row="7" 
+                  Width="150" FontSize="20" Height="30"
+                  SelectionChanged="startDate_SelectionChanged"
+        />
+        <ComboBox x:Name="endDate" Grid.Column="2" Grid.Row="7" 
+                  Width="150" FontSize="20" Height="30"
+        />
+        <Label x:Name="labelPZ" Grid.Column="1" Grid.Row="4"
+               FontSize="20"
+               Content="Lista PZ:"
+               />
+        <ListBox x:Name="BatchList" Grid.Row="5" Grid.Column="1"
+                 FontSize="20"
+                 Margin="10"
+         />
+        <TextBox x:Name="numberPZ" Grid.Column="1" Grid.Row="1"
+                   Width="300" Height="30"
+                   FontSize="20" Margin="1,0,2,0"
+        />
+        <Button x:Name="AddBatch" Grid.Column="2" Grid.Row="1"
+                Width="200" Height="30" Content="Dodaj PZ"
+                FontSize="20" FontWeight="Bold" Click="AddBatch_Click"
+        />
+        <Button x:Name="RemoveBatch" Grid.Column="2" Grid.Row="5"
+                Width="100" Height="30" Content="-"
+                FontSize="20" FontWeight="Bold"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="10" Click="RemoveBatch_Click"
+        />
+        <Button x:Name="DoReport" Grid.Column="1" Grid.Row="9" Content="Raportuj"
+                Margin="25,28,25,-58" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.496,1.756" Click="DoReport_Click"
+         />
+        <Label Grid.Column="1" Content="Ścieżka zapisu raportu" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="9" VerticalAlignment="Center" Width="140"
+               FontSize="10"
+               />
+        <Button Grid.Column="2" Content="ŚĆIEŻKA" HorizontalAlignment="Left" Margin="116,5,0,0" Grid.Row="9" Width="90" Grid.ColumnSpan="6" FontSize="8" Click="Button_Click" Height="18" VerticalAlignment="Top"/>
     </Grid>
 </Window>
